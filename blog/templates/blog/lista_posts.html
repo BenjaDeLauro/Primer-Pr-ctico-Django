@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Posts</title>
+</head>
+<body>
+    <h1>Lista de posts</h1>
+
+    {% for post in posts %}
+        <h2>{{ post.titulo }}</h2>
+        <p>{{ post.contenido }}</p>
+        <hr>
+    {% empty %}
+        <p>No hay posts cargados.</p>
+    {% endfor %}
+
+    <a href="/">Volver al inicio</a>
+</body>
+</html>
